@@ -1,3 +1,3 @@
-node slave-dev.co.health.qld.gov.au {
+node 'slave-dev.co.health.qld.gov.au' {
   include role::master
 }
