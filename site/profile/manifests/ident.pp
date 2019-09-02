@@ -1,10 +1,9 @@
 class profile::ident {
 
-$userlist = [{ user => "tillel", groups => ['wheel']  },
-             { user => "sittest", groups => ['wheel']  },]
+$userlist = ['tillel','test']
 
-$userlist.each {
-    file {'/home/sitadmin/$user.txt':
+$userlist.each | Integr $index  {
+    file {"/home/sitadmin/$userlist[$integer].txt":
       ensure => present,
       content => "Test",
     }
