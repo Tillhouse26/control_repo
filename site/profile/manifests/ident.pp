@@ -1,7 +1,7 @@
 class profile::ident {
     
-    #Generic Users
-    lookup('users::generic', Hash, 'first', {}).each | $resource_title, $params| { 
+    #Active Users
+    lookup('users::active', Hash, 'first', {}).each | $resource_title, $params| { 
       user {
         default:
           ensure     => 'present',
@@ -10,6 +10,6 @@ class profile::ident {
          #Map the values from Hiera
          $resource_title: * => $params ;
       }
-    }    
-
+    }   
+    
 }
