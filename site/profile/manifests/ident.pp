@@ -1,6 +1,12 @@
 class profile::ident {
-  file {'/home/sitadmin/ident.txt':
-    ensure => present,
-    content => "Development node",
+
+$userlist = [{ user => "tillel", groups => ['wheel']  },
+             { user => "sittest", groups => ['wheel']  },]
+
+$userlist.each {
+    file {'/home/sitadmin/$user.txt':
+      ensure => present,
+      content => "Test",
+    }
   }
 }
