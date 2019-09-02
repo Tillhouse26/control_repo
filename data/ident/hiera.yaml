@@ -10,3 +10,8 @@ users::generic:
       groups:     ['wheel']
       name:       'tillel'
       uid:        1211   
+   'test2': 
+      comment:    'Test User 2'
+      groups:     [']
+      name:       'test2'
+      uid:        1213   
