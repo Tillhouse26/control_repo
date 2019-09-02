@@ -4,8 +4,7 @@ users::active:
       comment:    'Liam Tille'
       groups:     ['wheel']
       name:       'tillel'
-      uid:        1211   
-
+      uid:        1211
 
 users::inactive:
    - 'test'
