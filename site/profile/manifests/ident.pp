@@ -1,11 +1,14 @@
 class profile::ident {
 
-$userlist = ['tillel','test']
+    lookup('users::generic', Hash, 'first', {}).each | $resource_title, $params| { 
+      user {
 
-$userlist.each | Integr $index  {
-    file {"/home/sitadmin/$userlist[$integer].txt":
-      ensure => present,
-      content => "Test",
+        default:
+          ensure     => 'present',
+          home       => "/home/${params['name']}",
+          managehome => true, ;
+         $resource_title: * => $params ;
+      }
     }
-  }
+
 }
