@@ -12,6 +12,6 @@ users::generic:
       uid:        1211   
    'test2': 
       comment:    'Test User 2'
-      groups:     [']
+      groups:     []
       name:       'test2'
       uid:        1213   
