@@ -1,11 +1,1 @@
-users::generic:
-   'test': 
-      comment:    'Test User'
-      groups:     []
-      name:       'test'
-      uid:        1212
-   'tillel': 
-      comment:    'Liam Tille'
-      groups:     ['wheel']
-      name:       'tillel'
-      uid:        1211   
+
