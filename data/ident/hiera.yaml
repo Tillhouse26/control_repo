@@ -10,4 +10,4 @@ users::active:
 users::inactive:
    - 'test'
    - 'test2'
-   - 'tillel2'
+   - 'tillel'
