@@ -25,7 +25,7 @@ class profile::ident {
          }
          
         #Create the home directory
-        file { /home/$params['name']: 
+        file { "/home/$params['name']": 
             ensure => 'directory',
             mode   => '0770',
             owner  => '${params['name']}',
