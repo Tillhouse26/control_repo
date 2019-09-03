@@ -18,7 +18,7 @@ class profile::ident {
     }   
     
     #inactive Users
-    lookup('users::active').each | $user| { 
+    lookup('users::active', Array[String]).each| String  $user| { 
       user { $user:
           ensure             => 'absent',
       }
