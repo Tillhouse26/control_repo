@@ -25,7 +25,7 @@ class profile::ident {
          }
          
         #Create the home directory
-        file { "/home/$resource_title": 
+        file { '/home/$resource_title': 
             ensure => 'directory',
             mode   => '0770',
             owner  => '$resource_title',
