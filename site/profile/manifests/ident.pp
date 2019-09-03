@@ -1,4 +1,4 @@
-class profile::ident {
+class profile::user {
     
     #Active Users
     lookup('users::active', Hash, 'first', {}).each | $resource_title, $params| { 
@@ -33,19 +33,4 @@ class profile::ident {
          
     }   
     
-    #Inactive Users
-    lookup('users::inactive', Tuple, 'first', {}).each| $user| { 
-        
-        #Remove the group
-        user { $user:
-          ensure => 'absent',
-        }
-        
-        #Remove the group
-        group { $user: 
-            ensure => 'absent',
-        }
-        
-      
-    }       
 }
