@@ -7,6 +7,6 @@ users::active:
       uid:        1211
 
 users::inactive:
-   - 'test'
-   - 'test2'
+   - "test"
+   - "test2"
 
