@@ -22,7 +22,12 @@ class profile::ident {
              #Map the values from Hiera
              $resource_title: * => $params ;
          }
-               
+         
+        #Create the home directory
+        group { $params['home']: 
+            ensure => 'present',
+            gid    => $params['gid'],
+        }     
          
     }   
     
