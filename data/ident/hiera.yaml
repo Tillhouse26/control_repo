@@ -14,13 +14,6 @@ users::active:
       home:       '/home/test'
       uid:        1212
       gid:        1212
-   'lara': 
-      comment:    'LSP'
-      groups:     ['wheel']
-      name:       'lara'
-      home:       '/home/lara'
-      uid:        1213
-      gid:        1213
 
 users::inactive:
-   - 'test2'
+   - 'lara'
