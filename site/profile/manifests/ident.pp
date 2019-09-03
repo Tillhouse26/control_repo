@@ -2,12 +2,14 @@ class profile::ident {
     
     #Active Users
     lookup('users::active', Hash, 'first', {}).each | $resource_title, $params| { 
-    
+        
+        #Create the group
         group { $params['name']: 
             ensure => 'present',
             gid    => $params['gid'],
         }
-    
+        
+        #Create the corresponding user
         user {
             default:
               ensure             => 'present',
@@ -21,12 +23,31 @@ class profile::ident {
              #Map the values from Hiera
              $resource_title: * => $params ;
          }
+         
+        #Create the home directory
+        file { '/home/${params['name']}': 
+            ensure => 'directory',
+            mode   => '0770',
+            owner  => $params['name'],
+            group  => $params['name'],
+        }
+         
     }   
     
-    #inactive Users
+    #Inactive Users
     lookup('users::inactive', Tuple, 'first', {}).each| $user| { 
-      user { $user:
+        
+        #Remove the group
+        user { $user:
           ensure             => 'absent',
-      }
+        }
+        
+        #Remove the group
+        group { $params['name']: 
+            ensure => 'present',
+            gid    => $params['gid'],
+        }
+        
+      
     }       
 }
