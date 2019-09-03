@@ -4,7 +4,7 @@ class profile::ident {
     lookup('users::active', Hash, 'first', {}).each | $resource_title, $params| { 
         
         #Create the group
-        group { $params['name']: 
+        group { $resource_title: 
             ensure => 'present',
             gid    => $params['gid'],
         }
@@ -14,7 +14,6 @@ class profile::ident {
             default:
               ensure             => 'present',
               managehome         => 'true',
-              home               => "/home/${params['name']}",
               password_max_age   => 900,
               password_min_age   => 7,
               password_warn_days => 7,
