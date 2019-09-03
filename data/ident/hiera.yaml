@@ -1,5 +1,11 @@
 ---
 users::active:
+   'tillel2': 
+      comment:    'Liam Tille'
+      groups:     ['wheel']
+      name:       'tillel2'
+      uid:        1211
+      gid:        1211
 
 users::inactive:
    - 'test'
