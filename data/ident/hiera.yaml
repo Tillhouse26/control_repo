@@ -7,7 +7,13 @@ users::active:
       home:       '/home/tillel'
       uid:        1211
       gid:        1211
-
+   'test': 
+      comment:    'Test User'
+      groups:     []
+      name:       'test'
+      home:       '/home/test'
+      uid:        1212
+      gid:        1212
+      
 users::inactive:
-   - 'test'
    - 'test2'
