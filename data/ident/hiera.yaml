@@ -4,6 +4,7 @@ users::active:
       comment:    'Liam Tille'
       groups:     ['wheel']
       name:       'tillel'
+      home:       '/home/tillel'
       uid:        1211
       gid:        1211
 
