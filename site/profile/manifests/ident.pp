@@ -28,8 +28,8 @@ class profile::ident {
         file { "/home/$params['name']": 
             ensure => 'directory',
             mode   => '0770',
-            owner  => '${params['name']}',
-            group  => '${params['name']}',
+            owner  => "${params['name']}",
+            group  => "${params['name']}",
         }         
          
     }   
