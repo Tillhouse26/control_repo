@@ -23,14 +23,7 @@ class profile::ident {
              #Map the values from Hiera
              $resource_title: * => $params ;
          }
-         
-        #Create the home directory
-        file { '/home/${resource_title}': 
-            ensure => 'directory',
-            mode   => '0770',
-            owner  => '${resource_title}',
-            group  => '${resource_title}',
-        }         
+               
          
     }   
     
