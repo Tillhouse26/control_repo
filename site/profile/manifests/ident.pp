@@ -5,7 +5,7 @@ class profile::ident {
     
         group { $params['name']: 
             ensure => 'present',
-            gid    => params['gid'],
+            gid    => $params['gid'],
         }
     
         user {
