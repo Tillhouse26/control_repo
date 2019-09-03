@@ -1,5 +1,5 @@
 class profile::user {
-
+    
     #Active Users
     lookup('users::active', Hash, 'first', {}).each | $resource_title, $params| { 
         
@@ -32,5 +32,5 @@ class profile::user {
         }     
          
     }   
-
+    
 }
