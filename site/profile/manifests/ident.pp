@@ -25,11 +25,11 @@ class profile::ident {
          }
          
         #Create the home directory
-        file { "/home/$params['name']": 
+        file { "/home/$resource_title": 
             ensure => 'directory',
             mode   => '0770',
-            owner  => "${params['name']}",
-            group  => "${params['name']}",
+            owner  => '$resource_title',
+            group  => '$resource_title',
         }         
          
     }   
