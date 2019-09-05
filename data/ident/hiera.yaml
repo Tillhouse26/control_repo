@@ -14,10 +14,10 @@ users::active:
       home:       '/home/test'
       uid:        1212
       gid:        1212
-   'tes2t': 
+   'test2': 
       comment:    'Test User2'
       groups:     []
-      name:       'test'
+      name:       'test2'
       home:       '/home/test2'
       uid:        1213
       gid:        1213
